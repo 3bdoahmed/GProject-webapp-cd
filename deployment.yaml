@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solar-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: solar-dashboard
+  template:
+    metadata:
+      labels:
+        app: solar-dashboard
+    spec:
+      containers:
+        - name: solar-dashboard
+          image: abdelrahman678/solar-dashboard:v3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
