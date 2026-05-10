@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: solar-dashboard
-          image: abdelrahman678/solar-dashboard:v5
+          image: abdelrahman678/solar-dashboard:v6
           imagePullPolicy: Always
           ports:
             - containerPort: 80
